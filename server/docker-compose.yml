@@ -1,0 +1,9 @@
+version: '3'
+services:
+  app:
+    image: your-dockerhub-username/portfolio_vue:latest
+    restart: unless-stopped
+    env_file:
+      - portfolio_vue-env
+    ports:
+      - "7045:80"
